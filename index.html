@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="description" content="Professional plumbing services in Lafayette and surrounding areas. Same-day service available." />
+  <meta name="description" content="Professional plumbing services in Carencro and surrounding areas. Same-day service available." />
   <title>Martin Plumbing Solutions</title>
   <script src="https://static.elfsight.com/platform/platform.js" async></script>
   <style>
@@ -15,29 +15,48 @@
       line-height: 1.6;
     }
 
-    header {
-      background-color: #fff !important;
-      text-align: center;
-      padding: 2rem 5% 1rem;
+    .header-flex {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      padding: 2rem 5%;
+      background-color: #fff;
     }
 
-    header img {
+    .header-flex img {
       width: 100%;
-      max-width: 1600px; /* doubled size */
+      max-width: 400px;
       height: auto;
-      margin-bottom: 1.5rem;
+      margin-bottom: 1rem;
     }
 
-    .tagline {
-      font-size: 1.4rem;
+    .header-text {
+      max-width: 600px;
+      flex: 1;
+      padding-left: 2rem;
+    }
+
+    .header-text h1 {
+      font-size: 2rem;
+      margin-bottom: 0.5rem;
+      color: #000; /* Changed from blue to black */
+    }
+
+    .header-text p {
+      margin: 0.4rem 0;
+      font-size: 1.1rem;
+    }
+
+    .badge {
+      display: inline-block;
+      background-color: gold;
+      color: #000;
       font-weight: bold;
-      background: linear-gradient(90deg, #2E9CFF, #1D45FF, #5D2EFF);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      background-clip: text;
-      text-fill-color: transparent;
-      margin: 0 auto;
-      max-width: 90%;
+      padding: 0.3rem 0.7rem;
+      border-radius: 1rem;
+      font-size: 0.95rem;
+      margin-top: 0.5rem;
     }
 
     .highlight-bar {
@@ -95,7 +114,6 @@
 
     .contact-icons li::before {
       margin-right: 0.7rem;
-      font-weight: normal;
     }
 
     .contact-icons li:nth-child(1)::before { content: "🏠"; }
@@ -125,13 +143,15 @@
       font-size: 0.9rem;
     }
 
-    @media (max-width: 600px) {
-      header img {
-        max-width: 250px;
+    @media (max-width: 768px) {
+      .header-flex {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
       }
 
-      .tagline {
-        font-size: 1.1rem;
+      .header-text {
+        padding-left: 0;
       }
 
       .phone-big {
@@ -142,13 +162,19 @@
 </head>
 <body>
 
-  <header>
+  <header class="header-flex">
     <img src="https://i.imgur.com/6sdqJxT.jpeg" alt="Martin Plumbing Solutions Logo" />
-    <div class="tagline">Professional plumbing services done right the first time.</div>
+    <div class="header-text">
+      <h1>Martin Plumbing Solutions</h1>
+      <p>Professional plumbing services done right the first time.</p>
+      <p><strong>📞 Call/Text: <a href="tel:3372551521">337-255-1521</a></strong></p>
+      <p>Serving Carencro & Surrounding Areas</p>
+      <div class="badge">⭐ 5-Star Rated Locally</div>
+    </div>
   </header>
 
   <div class="highlight-bar">
-    Same-day service available in most cases — 
+    Same-day service available in most cases —
     <span class="phone-big">Call/Text: 337-255-1521</span>
   </div>
 
@@ -171,7 +197,7 @@
       <ul class="contact-icons">
         <li>Residential & Commercial</li>
         <li>Licensed & Insured</li>
-        <li>Serving Lafayette & surrounding areas</li>
+        <li>Serving Carencro & surrounding areas</li>
       </ul>
     </section>
 
@@ -180,13 +206,11 @@
       <ul class="contact-info">
         <li>Call/Text: <a href="tel:3372551521">337-255-1521</a></li>
         <li>Email: <a href="mailto:martinplumbingsolutions@gmail.com">martinplumbingsolutions@gmail.com</a></li>
-        <li>Message me here or text for quick response!</li>
       </ul>
     </section>
 
     <section>
       <h2>Customer Reviews</h2>
-      <!-- Elfsight Google Reviews Widget -->
       <div class="elfsight-app-43ef5f9a-210a-4fd4-9d9e-5e984cfe3ca4" data-elfsight-app-lazy></div>
     </section>
 

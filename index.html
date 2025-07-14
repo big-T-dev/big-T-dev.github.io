@@ -2,7 +2,8 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Professional plumbing services in Lafayette and surrounding areas. Same-day service available." />
   <title>Martin Plumbing Solutions</title>
   <script src="https://static.elfsight.com/platform/platform.js" async></script>
   <style>
@@ -15,13 +16,14 @@
     }
 
     header {
-      background-color: #fff;
+      background-color: #fff !important;
       text-align: center;
       padding: 2rem 5% 1rem;
     }
 
     header img {
-      max-width: 800px;
+      width: 100%;
+      max-width: 1600px; /* doubled size */
       height: auto;
       margin-bottom: 1.5rem;
     }
@@ -29,7 +31,7 @@
     .tagline {
       font-size: 1.4rem;
       font-weight: bold;
-      background: linear-gradient(90deg, #2E9CFF, #1D45FF);
+      background: linear-gradient(90deg, #2E9CFF, #1D45FF, #5D2EFF);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
       background-clip: text;
@@ -41,7 +43,7 @@
     .highlight-bar {
       background-color: #ffffff;
       color: #1D45FF;
-      font-size: 1.25rem;
+      font-size: 1.4rem;
       font-weight: bold;
       padding: 1rem;
       text-align: center;
@@ -50,11 +52,12 @@
     }
 
     .phone-big {
-      font-size: 1.8rem;
+      font-size: 2.5rem;
       color: #1D45FF;
       font-weight: bold;
       display: inline-block;
       margin-left: 0.5rem;
+      vertical-align: middle;
     }
 
     .container {
@@ -87,19 +90,27 @@
       content: "✅";
       margin-right: 0.5rem;
       color: green;
+      font-weight: bold;
     }
 
     .contact-icons li::before {
-      margin-right: 0.5rem;
+      margin-right: 0.7rem;
+      font-weight: normal;
     }
 
     .contact-icons li:nth-child(1)::before { content: "🏠"; }
     .contact-icons li:nth-child(2)::before { content: "🛠️"; }
     .contact-icons li:nth-child(3)::before { content: "📍"; }
-    .contact-icons li:nth-child(4)::before { content: "📞"; }
-    .contact-icons li:nth-child(5)::before { content: "📧"; }
-    .contact-icons li:nth-child(6)::before { content: "🚨"; }
-    .contact-icons li:nth-child(7)::before { content: "💬"; }
+
+    .contact-info li::before {
+      content: "";
+      margin-right: 0;
+    }
+
+    .contact-info li {
+      margin: 0.4rem 0;
+      font-size: 1.15rem;
+    }
 
     .contact a {
       color: #005f73;
@@ -124,7 +135,7 @@
       }
 
       .phone-big {
-        font-size: 1.4rem;
+        font-size: 1.8rem;
       }
     }
   </style>
@@ -137,7 +148,7 @@
   </header>
 
   <div class="highlight-bar">
-    Same-day service available in most cases —
+    Same-day service available in most cases — 
     <span class="phone-big">Call/Text: 337-255-1521</span>
   </div>
 
@@ -155,15 +166,20 @@
       </ul>
     </section>
 
-    <section class="contact">
+    <section>
       <h2>Why Choose Us</h2>
       <ul class="contact-icons">
         <li>Residential & Commercial</li>
         <li>Licensed & Insured</li>
         <li>Serving Lafayette & surrounding areas</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Contact Us</h2>
+      <ul class="contact-info">
         <li>Call/Text: <a href="tel:3372551521">337-255-1521</a></li>
         <li>Email: <a href="mailto:martinplumbingsolutions@gmail.com">martinplumbingsolutions@gmail.com</a></li>
-        <li>Same-day service available in most cases</li>
         <li>Message me here or text for quick response!</li>
       </ul>
     </section>

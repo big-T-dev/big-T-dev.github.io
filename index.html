@@ -39,8 +39,8 @@
     }
 
     .header-flex img {
-      width: auto;
-      max-width: 100%;
+      width: 100%;
+      max-width: 300px;
       height: auto;
       margin-bottom: 1rem;
     }
@@ -78,24 +78,6 @@
       font-size: 0.95rem;
       margin-top: 0.5rem;
       text-decoration: none;
-    }
-
-    .cta-button {
-      position: absolute;
-      top: 2rem;
-      right: 5%;
-      background-color: #1D45FF;
-      color: #fff;
-      padding: 0.6rem 1.2rem;
-      border-radius: 6px;
-      text-decoration: none;
-      font-weight: bold;
-      font-size: 1rem;
-      transition: background 0.3s ease;
-    }
-
-    .cta-button:hover {
-      background-color: #0e35c7;
     }
 
     .highlight-bar {
@@ -159,7 +141,6 @@
       font-weight: bold;
     }
 
-    /* Our Commitment Section Styling */
     .commitment-container {
       display: flex;
       flex-wrap: wrap;
@@ -213,7 +194,6 @@
       margin-right: 0.5rem;
     }
 
-    /* Services Section */
     .services-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -253,9 +233,55 @@
       line-height: 1.4;
     }
 
-    /* Scroll padding fix */
     #contact-form {
       scroll-margin-top: 100px;
+    }
+
+    footer {
+      padding: 1rem 5%;
+      text-align: center;
+      font-size: 0.95rem;
+      background-color: #f8f8f8;
+      color: #555;
+    }
+
+    .floating-schedule {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background-color: #1D45FF;
+      color: white;
+      padding: 0.8rem 1.2rem;
+      border-radius: 30px;
+      font-weight: bold;
+      text-decoration: none;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
+      z-index: 1000;
+      transition: background 0.3s ease;
+    }
+
+    .floating-schedule:hover {
+      background-color: #0e35c7;
+    }
+
+    .back-to-top {
+      position: fixed;
+      bottom: 20px;
+      left: 20px;
+      display: none;
+      background-color: #005f73;
+      color: white;
+      border: none;
+      padding: 0.6rem 1.1rem;
+      border-radius: 50px;
+      font-size: 0.95rem;
+      cursor: pointer;
+      z-index: 1000;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
+    }
+
+    .back-to-top:hover {
+      background-color: #00475a;
     }
 
     @media (max-width: 768px) {
@@ -267,11 +293,6 @@
 
       .header-text {
         padding-left: 0;
-      }
-
-      .cta-button {
-        position: static;
-        margin-top: 1rem;
       }
 
       .phone-big {
@@ -288,14 +309,6 @@
         grid-template-columns: 1fr;
       }
     }
-
-    footer {
-      padding: 1rem 5%;
-      text-align: center;
-      font-size: 0.95rem;
-      background-color: #f8f8f8;
-      color: #555;
-    }
   </style>
 </head>
 <body>
@@ -309,7 +322,6 @@
       <p>Serving Carencro & Surrounding Areas</p>
       <a href="https://maps.app.goo.gl/Aaeu9wXVjxCatYrS8" target="_blank" rel="noopener noreferrer" class="badge">⭐ 5-Star Rated Locally</a>
     </div>
-    <a class="cta-button" href="#contact-form">📅 Schedule Service</a>
   </header>
 
   <div class="highlight-bar">
@@ -407,5 +419,18 @@
     &copy; 2025 Martin Plumbing Solutions, LLC – Serving Carencro, Lafayette, and surrounding areas.
   </footer>
 
+  <!-- Floating Buttons -->
+  <a href="#contact-form" class="floating-schedule">📅 Schedule</a>
+  <button id="backToTop" class="back-to-top">⬆ Top</button>
+
+  <script>
+    const backToTopBtn = document.getElementById('backToTop');
+    window.addEventListener('scroll', () => {
+      backToTopBtn.style.display = window.scrollY > 300 ? 'block' : 'none';
+    });
+    backToTopBtn.addEventListener('click', () => {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+  </script>
 </body>
 </html>

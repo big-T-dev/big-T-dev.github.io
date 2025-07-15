@@ -84,38 +84,14 @@
       font-size: 1rem;
       min-width: 140px;
       text-align: center;
-      border: 1.5px solid #b38f00;
       margin-right: 1rem;
+      /* border removed */
     }
 
     .badge:hover {
-      background-color: #d1b100;
-      color: black;
-      text-decoration: none;
-    }
-
-    .schedule-inline-button {
-      background-color: #1D45FF;
-      color: white;
-      padding: 0.5rem 1.1rem;
-      border-radius: 30px;
-      font-weight: bold;
-      text-decoration: none;
-      white-space: nowrap;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.25);
-      transition: background 0.3s ease;
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 1rem;
-      min-width: 140px;
-      text-align: center;
-    }
-
-    .schedule-inline-button:hover {
-      background-color: #0e35c7;
-      color: white;
-      text-decoration: none;
+      background-color: #ffd700cc;
+      cursor: pointer;
+      box-shadow: 0 6px 15px rgba(0,0,0,0.35);
     }
 
     .highlight-bar {
@@ -296,7 +272,7 @@
       box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
       z-index: 1000;
       transition: background 0.3s ease;
-      display: none; /* hidden on desktop */
+      display: none;
     }
 
     .floating-schedule:hover {
@@ -323,13 +299,6 @@
       background-color: #00475a;
     }
 
-    /* Inline buttons container */
-    .header-buttons {
-      display: flex;
-      align-items: center;
-      margin-top: 0.7rem;
-    }
-
     @media (max-width: 768px) {
       .header-flex {
         flex-direction: column;
@@ -345,14 +314,8 @@
         font-size: 1.8rem;
       }
 
-      /* Show floating schedule on mobile */
       .floating-schedule {
         display: inline-flex;
-      }
-
-      /* Hide inline schedule button on mobile */
-      .schedule-inline-button {
-        display: none;
       }
     }
 
@@ -376,10 +339,8 @@
       <div class="subtitle">Trusted Local Plumbing Experts</div>
       <p>📞 <strong><a href="tel:3372551521">337-255-1521</a></strong></p>
       <p>Serving Carencro & Surrounding Areas</p>
-      <div class="header-buttons">
-        <a href="https://maps.app.goo.gl/Aaeu9wXVjxCatYrS8" target="_blank" rel="noopener noreferrer" class="badge">⭐ 5-Star Rated Locally</a>
-        <a href="#contact-form" class="schedule-inline-button">📅 Schedule Service</a>
-      </div>
+      <a href="https://maps.app.goo.gl/Aaeu9wXVjxCatYrS8" target="_blank" rel="noopener noreferrer" class="badge">⭐ 5-Star Rated Locally</a>
+      <a href="#contact-form" class="floating-schedule desktop-schedule">📅 Schedule</a>
     </div>
   </header>
 
@@ -478,10 +439,8 @@
     &copy; 2025 Martin Plumbing Solutions, LLC – Serving Carencro, Lafayette, and surrounding areas.
   </footer>
 
-  <!-- Floating Schedule button on mobile -->
+  <!-- Floating Buttons -->
   <a href="#contact-form" class="floating-schedule">📅 Schedule</a>
-
-  <!-- Back to top button -->
   <button id="backToTop" class="back-to-top">⬆ Top</button>
 
   <script>

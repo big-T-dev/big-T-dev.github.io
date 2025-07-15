@@ -68,16 +68,38 @@
       font-size: 1.1rem;
     }
 
+    .badge-schedule-container {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      margin-top: 0.5rem;
+      flex-wrap: wrap;
+    }
+
     .badge {
-      display: inline-block;
       background-color: gold;
       color: #000;
       font-weight: bold;
       padding: 0.3rem 0.7rem;
       border-radius: 1rem;
       font-size: 0.95rem;
-      margin-top: 0.5rem;
       text-decoration: none;
+      white-space: nowrap;
+    }
+
+    .schedule-inline-button {
+      background-color: #1D45FF;
+      color: white;
+      padding: 0.5rem 1rem;
+      border-radius: 30px;
+      font-weight: bold;
+      text-decoration: none;
+      white-space: nowrap;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.25);
+      transition: background 0.3s ease;
+    }
+    .schedule-inline-button:hover {
+      background-color: #0e35c7;
     }
 
     .highlight-bar {
@@ -245,7 +267,9 @@
       color: #555;
     }
 
+    /* Floating Schedule button for mobile */
     .floating-schedule {
+      display: none;
       position: fixed;
       bottom: 20px;
       right: 20px;
@@ -264,6 +288,7 @@
       background-color: #0e35c7;
     }
 
+    /* Back to top button */
     .back-to-top {
       position: fixed;
       bottom: 20px;
@@ -298,17 +323,18 @@
       .phone-big {
         font-size: 1.8rem;
       }
-    }
 
-    @media (max-width: 600px) {
-      .commitment-container {
-        flex-direction: column;
+      /* Show floating schedule button on mobile */
+      .floating-schedule {
+        display: block;
       }
 
-      .services-grid {
-        grid-template-columns: 1fr;
+      /* Hide inline schedule button on mobile */
+      .schedule-inline-button {
+        display: none;
       }
     }
+
   </style>
 </head>
 <body>
@@ -320,7 +346,10 @@
       <div class="subtitle">Trusted Local Plumbing Experts</div>
       <p>📞 <strong><a href="tel:3372551521">337-255-1521</a></strong></p>
       <p>Serving Carencro & Surrounding Areas</p>
-      <a href="https://maps.app.goo.gl/Aaeu9wXVjxCatYrS8" target="_blank" rel="noopener noreferrer" class="badge">⭐ 5-Star Rated Locally</a>
+      <div class="badge-schedule-container">
+        <a href="https://maps.app.goo.gl/Aaeu9wXVjxCatYrS8" target="_blank" rel="noopener noreferrer" class="badge">⭐ 5-Star Rated Locally</a>
+        <a href="#contact-form" class="schedule-inline-button">📅 Schedule Service</a>
+      </div>
     </div>
   </header>
 
@@ -388,49 +417,4 @@
           <h3>Quality Service</h3>
           <ul>
             <li>Licensed & insured plumbing professionals</li>
-            <li>Customer satisfaction is our top priority</li>
-          </ul>
-        </div>
-      </div>
-    </section>
-
-    <section id="contact">
-      <h2>Contact Us</h2>
-      <ul class="contact-info">
-        <li>Call/Text: <a href="tel:3372551521">337-255-1521</a></li>
-        <li>Email: <a href="mailto:martinplumbingsolutions@gmail.com">martinplumbingsolutions@gmail.com</a></li>
-      </ul>
-    </section>
-
-    <section>
-      <h2>Customer Reviews</h2>
-      <div class="elfsight-app-43ef5f9a-210a-4fd4-9d9e-5e984cfe3ca4" data-elfsight-app-lazy></div>
-    </section>
-
-    <section id="contact-form">
-      <h2>Request a Service</h2>
-      <p>Please fill out the form below. We’ll get back to you as soon as possible!</p>
-      <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSd8pcoVX3ZzGQxS_35UxZEn_njGg07rhaqYGgj5iBg_WHu6Pg/viewform?embedded=true" width="100%" height="1543" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
-    </section>
-
-  </div>
-
-  <footer>
-    &copy; 2025 Martin Plumbing Solutions, LLC – Serving Carencro, Lafayette, and surrounding areas.
-  </footer>
-
-  <!-- Floating Buttons -->
-  <a href="#contact-form" class="floating-schedule">📅 Schedule</a>
-  <button id="backToTop" class="back-to-top">⬆ Top</button>
-
-  <script>
-    const backToTopBtn = document.getElementById('backToTop');
-    window.addEventListener('scroll', () => {
-      backToTopBtn.style.display = window.scrollY > 300 ? 'block' : 'none';
-    });
-    backToTopBtn.addEventListener('click', () => {
-      window.scrollTo({ top: 0, behavior: 'smooth' });
-    });
-  </script>
-</body>
-</html>
+            <

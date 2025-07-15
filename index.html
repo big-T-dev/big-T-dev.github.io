@@ -131,25 +131,13 @@
       font-size: 1.1rem;
     }
 
-    ul li::before {
-      content: "✅";
+    .contact-info li::before {
+      display: inline-block;
       margin-right: 0.5rem;
-      color: green;
-      font-weight: bold;
     }
 
-    .contact-icons li::before {
-      margin-right: 0.7rem;
-    }
-
-    .contact-icons li:nth-child(1)::before { content: "🏠"; }
-    .contact-icons li:nth-child(2)::before { content: "🛠️"; }
-    .contact-icons li:nth-child(3)::before { content: "📍"; }
-
-    .contact-info li {
-      margin: 0.4rem 0;
-      font-size: 1.15rem;
-    }
+    .contact-info li:nth-child(1)::before { content: "📞"; }
+    .contact-info li:nth-child(2)::before { content: "📧"; }
 
     .contact a {
       color: #005f73;
@@ -186,8 +174,8 @@
     }
 
     .commitment-item ul {
-      list-style-type: disc;
-      padding-left: 1.4rem;
+      list-style: none;
+      padding-left: 0;
       color: #333;
       font-size: 1.05rem;
     }
@@ -196,7 +184,22 @@
       margin-bottom: 0.45rem;
     }
 
-    /* New Services Section Styling */
+    .commitment-item:nth-child(1) ul li::before {
+      content: "🔍";
+      margin-right: 0.5rem;
+    }
+
+    .commitment-item:nth-child(2) ul li::before {
+      content: "📢";
+      margin-right: 0.5rem;
+    }
+
+    .commitment-item:nth-child(3) ul li::before {
+      content: "🏆";
+      margin-right: 0.5rem;
+    }
+
+    /* Services Section */
     .services-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));

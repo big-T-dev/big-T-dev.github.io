@@ -68,51 +68,45 @@
       font-size: 1.1rem;
     }
 
-    /* Styled badge for 5-Star Rated Locally */
+    .badge, .schedule-button {
+      display: inline-block;
+      padding: 0.7rem 1.2rem;
+      border-radius: 30px;
+      font-weight: bold;
+      font-size: 0.95rem;
+      text-decoration: none;
+      cursor: pointer;
+      box-shadow: 0 2px 7px rgb(29 69 255 / 0.15);
+      transition: box-shadow 0.3s ease, background-color 0.3s ease;
+      user-select: none;
+    }
+
+    /* Badge styles */
     .badge {
-      display: inline-flex;
       background-color: gold;
       color: #000;
-      font-weight: bold;
-      padding: 0.5rem 1rem;
-      border-radius: 30px;
-      font-size: 0.95rem;
-      margin-top: 0.5rem;
-      text-decoration: none;
-      min-width: 140px;
-      justify-content: center;
-      align-items: center;
+      margin-right: 0.8rem;
+      /* Remove any border or outline */
+      border: none;
       box-shadow: none;
-      transition: background 0.3s ease, box-shadow 0.3s ease;
     }
 
     .badge:hover {
-      background-color: #ffd633;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.25);
-      cursor: pointer;
+      box-shadow: 0 6px 15px rgb(29 69 255 / 0.25);
+      background-color: #ffdb4d; /* slightly darker gold on hover */
     }
 
-    /* Schedule button for desktop */
-    .desktop-schedule {
-      display: inline-flex;
+    /* Schedule button styles */
+    .schedule-button {
       background-color: #1D45FF;
-      color: white;
-      padding: 0.5rem 1rem;
-      border-radius: 30px;
-      font-weight: bold;
-      text-decoration: none;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.25);
-      transition: background 0.3s ease, box-shadow 0.3s ease;
-      min-width: 140px;
-      justify-content: center;
-      align-items: center;
-      margin-left: 0.5rem;
+      color: #fff;
+      border: none;
+      box-shadow: 0 2px 7px rgb(29 69 255 / 0.15);
     }
 
-    .desktop-schedule:hover {
+    .schedule-button:hover {
       background-color: #0e35c7;
-      cursor: pointer;
-      box-shadow: 0 6px 15px rgba(0,0,0,0.35);
+      box-shadow: 0 6px 15px rgb(29 69 255 / 0.3);
     }
 
     .highlight-bar {
@@ -280,7 +274,7 @@
       color: #555;
     }
 
-    /* Floating schedule button for mobile */
+    /* Floating schedule button - only on mobile */
     .floating-schedule {
       display: none;
       position: fixed;
@@ -299,10 +293,8 @@
 
     .floating-schedule:hover {
       background-color: #0e35c7;
-      cursor: pointer;
     }
 
-    /* Back to top button */
     .back-to-top {
       position: fixed;
       bottom: 20px;
@@ -323,7 +315,6 @@
       background-color: #00475a;
     }
 
-    /* Responsive adjustments */
     @media (max-width: 768px) {
       .header-flex {
         flex-direction: column;
@@ -339,13 +330,13 @@
         font-size: 1.8rem;
       }
 
-      /* Show floating schedule button on mobile */
+      /* Show floating schedule button only on mobile */
       .floating-schedule {
-        display: inline-flex;
+        display: block;
       }
 
-      /* Hide desktop schedule on mobile */
-      .desktop-schedule {
+      /* Hide the inline schedule button on mobile */
+      .schedule-button.inline-schedule {
         display: none;
       }
     }
@@ -370,10 +361,10 @@
       <div class="subtitle">Trusted Local Plumbing Experts</div>
       <p>📞 <strong><a href="tel:3372551521">337-255-1521</a></strong></p>
       <p>Serving Carencro & Surrounding Areas</p>
-      <div style="display: flex; align-items: center; margin-top: 0.5rem;">
+      <span>
         <a href="https://maps.app.goo.gl/Aaeu9wXVjxCatYrS8" target="_blank" rel="noopener noreferrer" class="badge">⭐ 5-Star Rated Locally</a>
-        <a href="#contact-form" class="desktop-schedule">📅 Schedule</a>
-      </div>
+        <a href="#contact-form" class="schedule-button inline-schedule">📅 Schedule Service</a>
+      </span>
     </div>
   </header>
 
@@ -472,8 +463,10 @@
     &copy; 2025 Martin Plumbing Solutions, LLC – Serving Carencro, Lafayette, and surrounding areas.
   </footer>
 
-  <!-- Floating Buttons -->
-  <a href="#contact-form" class="floating-schedule">📅 Schedule</a>
+  <!-- Floating schedule button on mobile -->
+  <a href="#contact-form" class="floating-schedule">📅 Schedule Service</a>
+
+  <!-- Back to top button -->
   <button id="backToTop" class="back-to-top">⬆ Top</button>
 
   <script>

@@ -157,11 +157,43 @@
       font-weight: bold;
     }
 
-    footer {
-      text-align: center;
-      background-color: #eee;
-      padding: 1rem;
-      font-size: 0.9rem;
+    /* Our Commitment Section Styling */
+    .commitment-container {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1.8rem;
+      margin-top: 1.2rem;
+    }
+
+    .commitment-item {
+      flex: 1 1 280px;
+      background-color: #e6f0ff;
+      padding: 1.3rem 1.5rem;
+      border-radius: 10px;
+      box-shadow: 0 2px 7px rgb(29 69 255 / 0.15);
+      transition: box-shadow 0.3s ease;
+    }
+
+    .commitment-item:hover {
+      box-shadow: 0 6px 15px rgb(29 69 255 / 0.25);
+    }
+
+    .commitment-item h3 {
+      color: #1D45FF;
+      margin-bottom: 0.7rem;
+      font-size: 1.25rem;
+      font-weight: 700;
+    }
+
+    .commitment-item ul {
+      list-style-type: disc;
+      padding-left: 1.4rem;
+      color: #333;
+      font-size: 1.05rem;
+    }
+
+    .commitment-item ul li {
+      margin-bottom: 0.45rem;
     }
 
     @media (max-width: 768px) {
@@ -182,6 +214,12 @@
 
       .phone-big {
         font-size: 1.8rem;
+      }
+    }
+
+    @media (max-width: 600px) {
+      .commitment-container {
+        flex-direction: column;
       }
     }
   </style>
@@ -220,12 +258,30 @@
     </section>
 
     <section>
-      <h2>Why Choose Us</h2>
-      <ul class="contact-icons">
-        <li>Residential & Commercial</li>
-        <li>Licensed & Insured</li>
-        <li>Serving Carencro & surrounding areas</li>
-      </ul>
+      <h2>Our Commitment</h2>
+      <div class="commitment-container">
+        <div class="commitment-item">
+          <h3>Thorough Evaluation</h3>
+          <ul>
+            <li>Detailed diagnosis to pinpoint the issue</li>
+            <li>Solutions you can trust, guaranteed</li>
+          </ul>
+        </div>
+        <div class="commitment-item">
+          <h3>Transparent Pricing</h3>
+          <ul>
+            <li>Upfront quotes with no surprises</li>
+            <li>Clear communication every step of the way</li>
+          </ul>
+        </div>
+        <div class="commitment-item">
+          <h3>Quality Service</h3>
+          <ul>
+            <li>Licensed & insured plumbing professionals</li>
+            <li>Customer satisfaction is our top priority</li>
+          </ul>
+        </div>
+      </div>
     </section>
 
     <section id="contact">

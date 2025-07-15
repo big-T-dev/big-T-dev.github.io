@@ -4,8 +4,22 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Martin Plumbing Solutions</title>
+  <link rel="icon" href="https://i.imgur.com/6sdqJxT.jpeg" type="image/jpeg">
+
+  <!-- Open Graph Meta Tags for sharing -->
+  <meta property="og:title" content="Martin Plumbing Solutions – Trusted Plumbing Services">
+  <meta property="og:description" content="Same-day plumbing services available in most cases. Serving Carencro and surrounding areas. Call or text 337-255-1521.">
+  <meta property="og:image" content="https://i.imgur.com/6sdqJxT.jpeg">
+  <meta property="og:url" content="https://yourdomain.com">
+  <meta name="theme-color" content="#1D45FF">
+
   <script src="https://static.elfsight.com/platform/platform.js" async></script>
+
   <style>
+    html {
+      scroll-behavior: smooth;
+    }
+
     body {
       margin: 0;
       font-family: Arial, sans-serif;
@@ -25,8 +39,8 @@
     }
 
     .header-flex img {
-      width: 100%;
-      max-width: 400px;
+      width: auto;
+      max-width: 100%;
       height: auto;
       margin-bottom: 1rem;
     }
@@ -45,7 +59,7 @@
 
     .header-text .subtitle {
       font-size: 1.05rem;
-      color: #777;
+      color: #555;
       margin-bottom: 0.8rem;
     }
 
@@ -239,6 +253,11 @@
       line-height: 1.4;
     }
 
+    /* Scroll padding fix */
+    #contact-form {
+      scroll-margin-top: 100px;
+    }
+
     @media (max-width: 768px) {
       .header-flex {
         flex-direction: column;
@@ -268,6 +287,14 @@
       .services-grid {
         grid-template-columns: 1fr;
       }
+    }
+
+    footer {
+      padding: 1rem 5%;
+      text-align: center;
+      font-size: 0.95rem;
+      background-color: #f8f8f8;
+      color: #555;
     }
   </style>
 </head>

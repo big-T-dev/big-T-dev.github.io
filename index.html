@@ -196,6 +196,46 @@
       margin-bottom: 0.45rem;
     }
 
+    /* New Services Section Styling */
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 2rem;
+      margin-top: 1rem;
+    }
+
+    .service-item {
+      background-color: #f0f8ff;
+      padding: 1.5rem;
+      border-radius: 10px;
+      box-shadow: 0 2px 7px rgb(29 69 255 / 0.15);
+      text-align: center;
+      transition: box-shadow 0.3s ease;
+    }
+
+    .service-item:hover {
+      box-shadow: 0 6px 15px rgb(29 69 255 / 0.3);
+    }
+
+    .service-icon {
+      font-size: 2.8rem;
+      margin-bottom: 1rem;
+      color: #1D45FF;
+    }
+
+    .service-item h3 {
+      margin-bottom: 0.6rem;
+      color: #1D45FF;
+      font-size: 1.25rem;
+      font-weight: 700;
+    }
+
+    .service-item p {
+      font-size: 1rem;
+      color: #333;
+      line-height: 1.4;
+    }
+
     @media (max-width: 768px) {
       .header-flex {
         flex-direction: column;
@@ -220,6 +260,10 @@
     @media (max-width: 600px) {
       .commitment-container {
         flex-direction: column;
+      }
+
+      .services-grid {
+        grid-template-columns: 1fr;
       }
     }
   </style>
@@ -247,14 +291,38 @@
 
     <section>
       <h2>Our Services</h2>
-      <ul>
-        <li>Fixture Installations</li>
-        <li>Toilet Repairs & Replacements</li>
-        <li>Garbage Disposals</li>
-        <li>Water Heaters</li>
-        <li>Faucet Repairs</li>
-        <li>Drain Cleaning</li>
-      </ul>
+      <div class="services-grid">
+        <div class="service-item">
+          <div class="service-icon">🚰</div>
+          <h3>Fixture Installations</h3>
+          <p>Expert installation of sinks, faucets, and other plumbing fixtures to keep your home running smoothly.</p>
+        </div>
+        <div class="service-item">
+          <div class="service-icon">🚽</div>
+          <h3>Toilet Repairs & Replacements</h3>
+          <p>Fast and reliable toilet repairs or replacements ensuring comfort and efficiency.</p>
+        </div>
+        <div class="service-item">
+          <div class="service-icon">♻️</div>
+          <h3>Garbage Disposals</h3>
+          <p>Installation and repair of garbage disposals to keep your kitchen clean and functional.</p>
+        </div>
+        <div class="service-item">
+          <div class="service-icon">🔥</div>
+          <h3>Water Heaters</h3>
+          <p>Water heater installation, repair, and maintenance to provide consistent hot water.</p>
+        </div>
+        <div class="service-item">
+          <div class="service-icon">🔧</div>
+          <h3>Faucet Repairs</h3>
+          <p>Fix leaking or damaged faucets quickly and professionally to save water and money.</p>
+        </div>
+        <div class="service-item">
+          <div class="service-icon">🧹</div>
+          <h3>Drain Cleaning</h3>
+          <p>Thorough drain cleaning services to prevent clogs and keep water flowing freely.</p>
+        </div>
+      </div>
     </section>
 
     <section>
